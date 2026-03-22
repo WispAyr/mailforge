@@ -1,0 +1,37 @@
+{
+  "name": "mailforge",
+  "version": "1.0.0",
+  "description": "Multi-tenant transactional email service for the Local Connect ecosystem",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx watch src/index.ts",
+    "start": "node dist/index.js",
+    "worker": "node dist/worker.js",
+    "migrate": "node dist/db/migrate.js",
+    "seed": "node dist/db/seed.js",
+    "dashboard": "cd dashboard && npm run build"
+  },
+  "dependencies": {
+    "@fastify/cors": "^11.0.1",
+    "@fastify/formbody": "^8.0.2",
+    "@fastify/static": "^8.1.0",
+    "bullmq": "^5.34.8",
+    "dotenv": "^16.5.0",
+    "fastify": "^5.3.3",
+    "handlebars": "^4.7.8",
+    "mjml": "^5.0.0-alpha.4",
+    "nanoid": "^5.1.5",
+    "nodemailer": "^6.9.16",
+    "pg": "^8.13.3",
+    "resend": "^4.1.2",
+    "uuid": "^11.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.10",
+    "@types/nodemailer": "^6.4.17",
+    "@types/pg": "^8.11.11",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3"
+  }
+}
